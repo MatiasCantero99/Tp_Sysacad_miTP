@@ -63,11 +63,13 @@ namespace Formularios
             btnGestionarRequisitos.Visible = false;
             btnGestionarProfesor.Visible = false;
             bttnGenerarReporte.Visible = false;
+            btnVerCursos.Visible = false;
             if (usuario.TipoUsuario.ToString() == "Estudiante")
             {
                 btnInscripcionCurso.Visible = true;
                 btnConsultarHorario.Visible = true;
                 btnRealizarPagos.Visible = true;
+                label2.Text += " De Estudiante";
 
             }
             else if (usuario.TipoUsuario.ToString() == "Administrador")
@@ -78,6 +80,12 @@ namespace Formularios
                 btnGestionarRequisitos.Visible = true;
                 btnGestionarProfesor.Visible = true;
                 bttnGenerarReporte.Visible = true;
+                label2.Text += " De Administrador";
+            }
+            else if (usuario.TipoUsuario.ToString() == "Profesor")
+            {
+                btnVerCursos.Visible = true;
+                label2.Text += " De Profesor";
             }
         }
 

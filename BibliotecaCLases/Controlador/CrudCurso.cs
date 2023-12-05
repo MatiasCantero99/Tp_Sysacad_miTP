@@ -36,12 +36,12 @@ namespace BibliotecaCLases.Controlador
         /// <param name="dia">Día del curso.</param>
         /// <param name="horario">Horario del curso.</param>
         /// <param name="aula">Aula del curso.</param>
-        public void AgregarCurso(string nombre, string codigo, string descripcion, string cupoMaximo, string dia, string horario, string aula)
+        public async void AgregarCurso(string nombre, string codigo, string descripcion, string cupoMaximo, string dia, string horario, string aula)
         {
             _gestionListasEspera.AgregarCurso(codigo);
             Curso nuevoCurso = new Curso(nombre, codigo, descripcion, cupoMaximo, dia, horario, aula, "", "6", "0");
 
-            dBCurso.Guardar(nuevoCurso);
+            await dBCurso.Guardar(nuevoCurso);
         }
 
         /// <summary>

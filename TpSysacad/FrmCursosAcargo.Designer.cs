@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCursosAcargo));
             btnSalir = new Button();
             dtgCrusos_alumnos = new DataGridView();
             btnMostrarAlumnos = new Button();
@@ -43,113 +44,145 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(24, 397);
+            btnSalir.BackColor = Color.IndianRed;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.ForeColor = SystemColors.ActiveCaptionText;
+            btnSalir.Location = new Point(34, 662);
+            btnSalir.Margin = new Padding(4, 5, 4, 5);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(75, 23);
+            btnSalir.Size = new Size(107, 38);
             btnSalir.TabIndex = 0;
             btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
             // dtgCrusos_alumnos
             // 
+            dtgCrusos_alumnos.BackgroundColor = Color.ForestGreen;
             dtgCrusos_alumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgCrusos_alumnos.Location = new Point(34, 118);
+            dtgCrusos_alumnos.Location = new Point(49, 197);
+            dtgCrusos_alumnos.Margin = new Padding(4, 5, 4, 5);
             dtgCrusos_alumnos.Name = "dtgCrusos_alumnos";
+            dtgCrusos_alumnos.RowHeadersWidth = 62;
             dtgCrusos_alumnos.RowTemplate.Height = 25;
             dtgCrusos_alumnos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgCrusos_alumnos.Size = new Size(640, 150);
+            dtgCrusos_alumnos.Size = new Size(914, 250);
             dtgCrusos_alumnos.TabIndex = 1;
             dtgCrusos_alumnos.CellClick += dtgCrusos_alumnos_CellClick;
             // 
             // btnMostrarAlumnos
             // 
-            btnMostrarAlumnos.Location = new Point(252, 328);
+            btnMostrarAlumnos.BackColor = Color.SeaGreen;
+            btnMostrarAlumnos.FlatStyle = FlatStyle.Flat;
+            btnMostrarAlumnos.Location = new Point(360, 547);
+            btnMostrarAlumnos.Margin = new Padding(4, 5, 4, 5);
             btnMostrarAlumnos.Name = "btnMostrarAlumnos";
-            btnMostrarAlumnos.Size = new Size(125, 23);
+            btnMostrarAlumnos.Size = new Size(179, 38);
             btnMostrarAlumnos.TabIndex = 2;
             btnMostrarAlumnos.Text = "Mostrar Alumnos ";
-            btnMostrarAlumnos.UseVisualStyleBackColor = true;
+            btnMostrarAlumnos.UseVisualStyleBackColor = false;
             btnMostrarAlumnos.Click += btnMostrarAlumnos_Click;
             // 
             // btnIngresarNota
             // 
-            btnIngresarNota.Location = new Point(71, 286);
+            btnIngresarNota.BackColor = Color.SeaGreen;
+            btnIngresarNota.FlatStyle = FlatStyle.Flat;
+            btnIngresarNota.Location = new Point(101, 477);
+            btnIngresarNota.Margin = new Padding(4, 5, 4, 5);
             btnIngresarNota.Name = "btnIngresarNota";
-            btnIngresarNota.Size = new Size(110, 23);
+            btnIngresarNota.Size = new Size(157, 38);
             btnIngresarNota.TabIndex = 3;
             btnIngresarNota.Text = "ingresar Nota";
-            btnIngresarNota.UseVisualStyleBackColor = true;
+            btnIngresarNota.UseVisualStyleBackColor = false;
             btnIngresarNota.Visible = false;
             btnIngresarNota.Click += btnIngresarNota_Click;
             // 
             // btnAsistancia
             // 
-            btnAsistancia.Location = new Point(501, 286);
+            btnAsistancia.BackColor = Color.SeaGreen;
+            btnAsistancia.FlatStyle = FlatStyle.Flat;
+            btnAsistancia.Location = new Point(716, 477);
+            btnAsistancia.Margin = new Padding(4, 5, 4, 5);
             btnAsistancia.Name = "btnAsistancia";
-            btnAsistancia.Size = new Size(93, 23);
+            btnAsistancia.Size = new Size(133, 38);
             btnAsistancia.TabIndex = 4;
             btnAsistancia.Text = "Asistencia";
-            btnAsistancia.UseVisualStyleBackColor = true;
+            btnAsistancia.UseVisualStyleBackColor = false;
             btnAsistancia.Visible = false;
             btnAsistancia.Click += btnAsistancia_Click;
             // 
             // CbxTipoEvaluacion
             // 
+            CbxTipoEvaluacion.BackColor = Color.Green;
+            CbxTipoEvaluacion.FlatStyle = FlatStyle.Flat;
             CbxTipoEvaluacion.FormattingEnabled = true;
-            CbxTipoEvaluacion.Location = new Point(71, 69);
+            CbxTipoEvaluacion.Location = new Point(101, 115);
+            CbxTipoEvaluacion.Margin = new Padding(4, 5, 4, 5);
             CbxTipoEvaluacion.Name = "CbxTipoEvaluacion";
-            CbxTipoEvaluacion.Size = new Size(182, 23);
+            CbxTipoEvaluacion.Size = new Size(258, 33);
             CbxTipoEvaluacion.TabIndex = 5;
             CbxTipoEvaluacion.Text = "Seleccione tipo Evaluacion";
             CbxTipoEvaluacion.Visible = false;
             // 
             // textBoxNota
             // 
-            textBoxNota.Location = new Point(347, 69);
+            textBoxNota.BackColor = Color.SeaGreen;
+            textBoxNota.BorderStyle = BorderStyle.FixedSingle;
+            textBoxNota.Location = new Point(442, 117);
+            textBoxNota.Margin = new Padding(4, 5, 4, 5);
             textBoxNota.Name = "textBoxNota";
             textBoxNota.PlaceholderText = "Ingrese la nota";
-            textBoxNota.Size = new Size(100, 23);
+            textBoxNota.Size = new Size(141, 31);
             textBoxNota.TabIndex = 6;
             textBoxNota.Visible = false;
             // 
             // btnGuardarNota
             // 
-            btnGuardarNota.Location = new Point(287, 286);
+            btnGuardarNota.BackColor = Color.SeaGreen;
+            btnGuardarNota.FlatStyle = FlatStyle.Flat;
+            btnGuardarNota.Location = new Point(410, 477);
+            btnGuardarNota.Margin = new Padding(4, 5, 4, 5);
             btnGuardarNota.Name = "btnGuardarNota";
-            btnGuardarNota.Size = new Size(134, 23);
+            btnGuardarNota.Size = new Size(191, 38);
             btnGuardarNota.TabIndex = 7;
             btnGuardarNota.Text = "Guardar Nota";
-            btnGuardarNota.UseVisualStyleBackColor = true;
+            btnGuardarNota.UseVisualStyleBackColor = false;
             btnGuardarNota.Visible = false;
             btnGuardarNota.Click += btnGuardarNota_Click;
             // 
             // cbxAsistencia
             // 
+            cbxAsistencia.BackColor = Color.Green;
+            cbxAsistencia.FlatStyle = FlatStyle.Flat;
             cbxAsistencia.FormattingEnabled = true;
-            cbxAsistencia.Location = new Point(478, 72);
+            cbxAsistencia.Location = new Point(683, 120);
+            cbxAsistencia.Margin = new Padding(4, 5, 4, 5);
             cbxAsistencia.Name = "cbxAsistencia";
-            cbxAsistencia.Size = new Size(160, 23);
+            cbxAsistencia.Size = new Size(227, 33);
             cbxAsistencia.TabIndex = 8;
             cbxAsistencia.Text = "Seleccione la Asistencia";
             cbxAsistencia.Visible = false;
             // 
             // btnGuardarAsistencia
             // 
-            btnGuardarAsistencia.Location = new Point(414, 328);
+            btnGuardarAsistencia.BackColor = Color.SeaGreen;
+            btnGuardarAsistencia.FlatStyle = FlatStyle.Flat;
+            btnGuardarAsistencia.Location = new Point(591, 547);
+            btnGuardarAsistencia.Margin = new Padding(4, 5, 4, 5);
             btnGuardarAsistencia.Name = "btnGuardarAsistencia";
-            btnGuardarAsistencia.Size = new Size(129, 23);
+            btnGuardarAsistencia.Size = new Size(184, 38);
             btnGuardarAsistencia.TabIndex = 9;
             btnGuardarAsistencia.Text = "Guardar Asistencia";
-            btnGuardarAsistencia.UseVisualStyleBackColor = true;
+            btnGuardarAsistencia.UseVisualStyleBackColor = false;
             btnGuardarAsistencia.Visible = false;
             btnGuardarAsistencia.Click += btnGuardarAsistencia_Click;
             // 
             // FrmCursosAcargo
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1078, 717);
             Controls.Add(btnGuardarAsistencia);
             Controls.Add(cbxAsistencia);
             Controls.Add(btnGuardarNota);
@@ -160,6 +193,8 @@
             Controls.Add(btnMostrarAlumnos);
             Controls.Add(dtgCrusos_alumnos);
             Controls.Add(btnSalir);
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
             Name = "FrmCursosAcargo";
             Text = "FrmCursosAcargo";
             Load += FrmCursosAcargo_Load;

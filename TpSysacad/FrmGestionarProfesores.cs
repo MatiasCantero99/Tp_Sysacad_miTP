@@ -85,7 +85,7 @@ namespace Formularios
 
         public void MostrarProfes()
         {
-           
+
             Dictionary<int, Tuple<string, string, string, List<string>>> profesores = _presentador.CargarAsignaturasDeProfesor();
             foreach (var kvp in profesores)
             {
@@ -93,10 +93,10 @@ namespace Formularios
                 var nombreProfesor = kvp.Value.Item1;
                 var apellidoProfesor = kvp.Value.Item2;
                 var telefonoProfesor = kvp.Value.Item3;
-                var correoProfesor = kvp.Value.Item4;    
-                var especializacionProfesor = kvp.Value.Item1;  
+                var correoProfesor = kvp.Value.Item4;
+                var especializacionProfesor = kvp.Value.Item1;
                 var cursos = string.Join(", ", kvp.Value.Item4);
-                dtgProfesores.Rows.Add(legajoProfesor, nombreProfesor, apellidoProfesor,telefonoProfesor, cursos);
+                dtgProfesores.Rows.Add(legajoProfesor, nombreProfesor, apellidoProfesor, telefonoProfesor, cursos);
             }
 
         }
@@ -116,7 +116,7 @@ namespace Formularios
         }
         public void MostrarCursos(List<Curso> cursos)
         {
-            
+
 
             if (cursos.Count > 0)
             {

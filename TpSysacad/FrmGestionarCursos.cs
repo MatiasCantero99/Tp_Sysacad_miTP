@@ -120,12 +120,15 @@ namespace Formularios
             if (usuario.TipoUsuario.ToString() == "Estudiante")
             {
                 btnInscripcion.Visible = true;
+                dataGridViewCursos.BackgroundColor = Color.MediumSlateBlue;
             }
             else if (usuario.TipoUsuario.ToString() == "Administrador")
             {
                 BtnAgregarCurso.Visible = true;
                 BtnEditarCursos.Visible = true;
                 BtnEliminarCursos.Visible = true;
+                dataGridViewCursos.BackgroundColor = Color.SandyBrown;
+
             }
         }
 

@@ -182,7 +182,7 @@ namespace Formularios
                 btnIngresarNota.Visible = false;
                 dtgCrusos_alumnos.Visible = false;
                 cbxAsistencia.Visible = true;
-                btnGuardarAsistencia.Visible=true;
+                btnGuardarAsistencia.Visible = true;
 
 
             }
@@ -243,7 +243,7 @@ namespace Formularios
         private void btnGuardarAsistencia_Click(object sender, EventArgs e)
         {
             string tipoAsistencia = cbxAsistencia.SelectedItem?.ToString()!;
-            if(tipoAsistencia != null)
+            if (tipoAsistencia != null)
             {
                 if (_accionesProfesor.MandaAGuardarAsistencia(tipoAsistencia))
                 {

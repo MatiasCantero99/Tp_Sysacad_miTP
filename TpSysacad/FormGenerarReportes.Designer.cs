@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGenerarReportes));
             dataGridViewReportes = new DataGridView();
             Check = new DataGridViewCheckBoxColumn();
             Informe = new DataGridViewTextBoxColumn();
@@ -46,9 +47,10 @@
             // 
             dataGridViewReportes.AllowUserToAddRows = false;
             dataGridViewReportes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewReportes.BackgroundColor = Color.SandyBrown;
             dataGridViewReportes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewReportes.Columns.AddRange(new DataGridViewColumn[] { Check, Informe });
-            dataGridViewReportes.Location = new Point(82, 67);
+            dataGridViewReportes.Location = new Point(170, 108);
             dataGridViewReportes.Name = "dataGridViewReportes";
             dataGridViewReportes.RowHeadersWidth = 62;
             dataGridViewReportes.RowTemplate.Height = 33;
@@ -73,16 +75,20 @@
             // label
             // 
             label.AutoSize = true;
-            label.Location = new Point(324, 9);
+            label.BackColor = Color.Transparent;
+            label.Font = new Font("Times New Roman", 14F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label.Location = new Point(440, 23);
             label.Name = "label";
-            label.Size = new Size(140, 25);
+            label.Size = new Size(215, 32);
             label.TabIndex = 1;
             label.Text = "Generar Reporte";
             // 
             // cBCurso
             // 
+            cBCurso.BackColor = Color.Gold;
+            cBCurso.FlatStyle = FlatStyle.Flat;
             cBCurso.FormattingEnabled = true;
-            cBCurso.Location = new Point(297, 298);
+            cBCurso.Location = new Point(424, 426);
             cBCurso.Name = "cBCurso";
             cBCurso.Size = new Size(182, 33);
             cBCurso.TabIndex = 2;
@@ -91,29 +97,38 @@
             // 
             // btnMuestra
             // 
-            btnMuestra.Location = new Point(82, 348);
+            btnMuestra.BackColor = Color.Khaki;
+            btnMuestra.FlatStyle = FlatStyle.Flat;
+            btnMuestra.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMuestra.Location = new Point(48, 552);
             btnMuestra.Name = "btnMuestra";
             btnMuestra.Size = new Size(142, 34);
             btnMuestra.TabIndex = 3;
             btnMuestra.Text = "Mostrar Datos";
-            btnMuestra.UseVisualStyleBackColor = true;
+            btnMuestra.UseVisualStyleBackColor = false;
             btnMuestra.Click += btnMuestra_Click;
             // 
             // btnGenerador
             // 
-            btnGenerador.Location = new Point(82, 348);
+            btnGenerador.BackColor = Color.Khaki;
+            btnGenerador.FlatStyle = FlatStyle.Flat;
+            btnGenerador.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnGenerador.Location = new Point(48, 552);
             btnGenerador.Name = "btnGenerador";
             btnGenerador.Size = new Size(156, 34);
             btnGenerador.TabIndex = 4;
             btnGenerador.Text = "Generar Reporte";
-            btnGenerador.UseVisualStyleBackColor = true;
+            btnGenerador.UseVisualStyleBackColor = false;
             btnGenerador.Visible = false;
             btnGenerador.Click += btnGenerador_Click;
             // 
             // cBPeriodo
             // 
+            cBPeriodo.BackColor = Color.Gold;
+            cBPeriodo.FlatStyle = FlatStyle.Flat;
+            cBPeriodo.ForeColor = SystemColors.ActiveCaptionText;
             cBPeriodo.FormattingEnabled = true;
-            cBPeriodo.Location = new Point(297, 298);
+            cBPeriodo.Location = new Point(424, 426);
             cBPeriodo.Name = "cBPeriodo";
             cBPeriodo.Size = new Size(182, 33);
             cBPeriodo.TabIndex = 5;
@@ -122,8 +137,10 @@
             // 
             // cBPago
             // 
+            cBPago.BackColor = Color.Gold;
+            cBPago.FlatStyle = FlatStyle.Flat;
             cBPago.FormattingEnabled = true;
-            cBPago.Location = new Point(297, 298);
+            cBPago.Location = new Point(424, 426);
             cBPago.Name = "cBPago";
             cBPago.Size = new Size(182, 33);
             cBPago.TabIndex = 6;
@@ -132,18 +149,23 @@
             // 
             // btnAtras
             // 
-            btnAtras.Location = new Point(23, 404);
+            btnAtras.BackColor = Color.IndianRed;
+            btnAtras.FlatStyle = FlatStyle.Flat;
+            btnAtras.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAtras.Location = new Point(12, 671);
             btnAtras.Name = "btnAtras";
             btnAtras.Size = new Size(112, 34);
             btnAtras.TabIndex = 7;
             btnAtras.Text = "Atras";
-            btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.UseVisualStyleBackColor = false;
             btnAtras.Click += btnAtras_Click;
             // 
             // cBEspera
             // 
+            cBEspera.BackColor = Color.Gold;
+            cBEspera.FlatStyle = FlatStyle.Flat;
             cBEspera.FormattingEnabled = true;
-            cBEspera.Location = new Point(297, 298);
+            cBEspera.Location = new Point(424, 426);
             cBEspera.Name = "cBEspera";
             cBEspera.Size = new Size(182, 33);
             cBEspera.TabIndex = 8;
@@ -154,7 +176,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1078, 717);
             Controls.Add(cBEspera);
             Controls.Add(btnAtras);
             Controls.Add(cBPago);
@@ -164,6 +187,7 @@
             Controls.Add(cBCurso);
             Controls.Add(label);
             Controls.Add(dataGridViewReportes);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormGenerarReportes";
             Text = "FormGemerarReportes";
             ((System.ComponentModel.ISupportInitialize)dataGridViewReportes).EndInit();

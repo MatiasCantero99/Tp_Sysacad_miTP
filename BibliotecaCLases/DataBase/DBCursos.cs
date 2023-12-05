@@ -16,34 +16,36 @@ namespace BibliotecaCLases.DataBase
         {
 
         }
-        public void Guardar(Curso curso)
+        public async Task Guardar(Curso curso)
         {
             try
             {
-                _conexion.Open();
-                var query = $"INSERT INTO Cursos (Codigo, Nombre, Descripcion, CupoMaximo, CuposDisponibles,Activo, Dia,Horario,Aula,Correlativas,PromedioRequerido,CreditosRequeridos) VALUES (@Codigo, @Nombre," +
-                    " @Descripcion, @CupoMaximo, @CuposDisponibles,@Activo,@Dia,@Horario,@Aula,@Correlativas,@PromedioRequerido,@CreditosRequeridos)";
-                _comando.CommandText = query;
+                await Task.Run(() =>
+                {
+                    _conexion.Open();
+                    var query = $"INSERT INTO Cursos (Codigo, Nombre, Descripcion, CupoMaximo, CuposDisponibles,Activo, Dia,Horario,Aula,Correlativas,PromedioRequerido,CreditosRequeridos) VALUES (@Codigo, @Nombre," +
+                        " @Descripcion, @CupoMaximo, @CuposDisponibles,@Activo,@Dia,@Horario,@Aula,@Correlativas,@PromedioRequerido,@CreditosRequeridos)";
+                    _comando.CommandText = query;
 
-                //Ajuste de parámetros con valores reales
-                _comando.Parameters.AddWithValue("@Codigo", curso.Codigo);
-                _comando.Parameters.AddWithValue("@Nombre", curso.Nombre);
-                _comando.Parameters.AddWithValue("@Descripcion", curso.Descripcion);
-                _comando.Parameters.AddWithValue("@CupoMaximo", curso.CupoMaximo);
-                _comando.Parameters.AddWithValue("@CuposDisponibles", curso.CuposDisponibles);
-                _comando.Parameters.AddWithValue("@Activo", curso.Activo);
-                _comando.Parameters.AddWithValue("@Dia", curso.Dia);
-                _comando.Parameters.AddWithValue("@Horario", curso.Horario);
-                _comando.Parameters.AddWithValue("@Aula", curso.Aula);
-                _comando.Parameters.AddWithValue("@Correlativas", curso.Correlativas);
-                _comando.Parameters.AddWithValue("@PromedioRequerido", curso.PromedioRequerido);
-                _comando.Parameters.AddWithValue("@CreditosRequeridos", curso.CreditosRequerido);
+                    //Ajuste de parámetros con valores reales
+                    _comando.Parameters.AddWithValue("@Codigo", curso.Codigo);
+                    _comando.Parameters.AddWithValue("@Nombre", curso.Nombre);
+                    _comando.Parameters.AddWithValue("@Descripcion", curso.Descripcion);
+                    _comando.Parameters.AddWithValue("@CupoMaximo", curso.CupoMaximo);
+                    _comando.Parameters.AddWithValue("@CuposDisponibles", curso.CuposDisponibles);
+                    _comando.Parameters.AddWithValue("@Activo", curso.Activo);
+                    _comando.Parameters.AddWithValue("@Dia", curso.Dia);
+                    _comando.Parameters.AddWithValue("@Horario", curso.Horario);
+                    _comando.Parameters.AddWithValue("@Aula", curso.Aula);
+                    _comando.Parameters.AddWithValue("@Correlativas", curso.Correlativas);
+                    _comando.Parameters.AddWithValue("@PromedioRequerido", curso.PromedioRequerido);
+                    _comando.Parameters.AddWithValue("@CreditosRequeridos", curso.CreditosRequerido);
 
-                //comando.Parameters.Clear();
+                    //comando.Parameters.Clear();
 
-                var filasAfectadas = _comando.ExecuteNonQuery();
+                    var filasAfectadas = _comando.ExecuteNonQuery();
 
-                Console.WriteLine("Filas afectadas " + filasAfectadas);
+                });
             }
             catch (Exception ex)
             {
